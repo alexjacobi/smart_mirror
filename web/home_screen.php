@@ -23,9 +23,9 @@
 		
 		
 		<div class="top left" name="weather">
-			<div id="current_weather"></div>
-			<div id="forecast" class="Sfont"></div>
-			<div id="icon"></div>
+			<div id="current_weather" class="weather"></div>
+			<div id="icon" class="weather"></div>
+			<table id="forecast" class="Sfont"></table>
 		</div>
 
 		<div class="top right" name="today">

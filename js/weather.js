@@ -17,8 +17,8 @@ function getWeather() {
 		    success: function(data){  
 		    	var iconCode = getIcon(data.weather[0].id, data.weather[0].icon);
 		    	var temperature = Math.round(data.main.temp);
-		    	document.getElementById("current_weather").innerHTML += ('<div>'+temperature+'\u00B0'+'</div>');
-       			document.getElementById("icon").innerHTML += ('<div class="owf owf-' +iconCode+'"></div>');
+		    	document.getElementById("current_weather").innerHTML += ('<div class="owf owf-' + iconCode + '">'+temperature+'\u00B0'+'</div>');
+       			//document.getElementById("icon").innerHTML += ('<div class="owf owf-' +iconCode+'"></div>');
 			},  
 		    error: function(e){  
 		    	alert("Could not update weather");  
@@ -40,7 +40,7 @@ function getForecast(){
 	        	var dayCount = 0;
 	        	for(i=1; i<6; i++){
 	        		forecastTemp[i] = Math.round(data.list[i].temp.day);
-	        		document.getElementById("forecast").innerHTML += ('<div>'+forecastDay[dayCount]+' '+forecastTemp[i]+'\u00B0'+'</div>');
+	        		document.getElementById("forecast").innerHTML += ('<tr><td>'+forecastDay[dayCount]+' '+forecastTemp[i]+'\u00B0'+'</td></tr>');
 	        		dayCount++;
 	        	}
 	        	
