@@ -1,9 +1,3 @@
-<?php
-	//$json_data = file_get_contents('http://api.openweathermap.org/data/2.5/weather?id=6254928&appid=2de143494c0b295cca9337e1e96b00e0&units=imperial');
-	//$decoded_data = json_decode($json_data);
-	//$temp = $decoded_data->main->temp;
-?>
-
 <html>
 	<head>
 		<title>Smart Mirror</title>
@@ -23,8 +17,8 @@
 		
 		
 		<div class="top left" name="weather">
-			<div id="current_weather" class="weather"></div>
-			<div id="icon" class="weather"></div>
+			<table id="current_weather" class="weather"></table>
+			<!--<div id="icon" class="weather"></div>-->
 			<table id="forecast" class="Sfont"></table>
 		</div>
 
@@ -35,7 +29,8 @@
 		</div>
 
 		<div class="bottom" name="news">
-			<div id="headlines"></div>
+			<div id="headline"></div>
+			<div id="abstract"></div>
 		</div>		
 
 		<script type="text/javascript">

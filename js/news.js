@@ -5,17 +5,24 @@ var responseType = "json";
 var sections = "world,national,technology,science"
 var newsURL = "http://api.nytimes.com/svc/mostpopular/v2/mostviewed/" + sections + "/1.json?api-key=" + key;
 
+$(document).ready(function(){
+    setInterval(getHeadlines, 600000); 
+}); 
+
 function getHeadlines(){
 	$(document).ready(function(){
+		$('#headline').empty();
+		$('#abstract').empty();
 		$.ajax({  
 		    type: "GET",  
 		    url: newsURL,
 		    datatype: 'json',  
 		    success: function(data){  
-		    	var headline = data.results[Math.floor(Math.random()*data.results.length)].title;
-		    	var abstract = data.results[Math.floor(Math.random()*data.results.length)].abstract;
-       			document.getElementById("headlines").innerHTML += ('<div>'+headline+'</div>');
-       			document.getElementById("headlines").innerHTML += ('<div>'+abstract+'</div>');
+		    	var article = Math.floor(Math.random()*data.results.length);
+		    	var headline = data.results[article].title;
+		    	var abstract = data.results[article].abstract;
+       			document.getElementById("headline").innerHTML += ('<div>'+headline+'</div>');
+       			document.getElementById("abstract").innerHTML += ('<div>'+abstract+'</div>');
 			},  
 		    error: function(e){  
 		    	alert("Could not update headlines");  
@@ -29,3 +36,5 @@ function getSection(){
 	var section = sections[Math.floor(Math.random()*sections.length)];
 	return section;
 }
+
+
