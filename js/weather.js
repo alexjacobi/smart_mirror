@@ -17,7 +17,7 @@ function getWeather() {
 		    success: function(data){  
 		    	var iconCode = getIcon(data.weather[0].id, data.weather[0].icon);
 		    	var temperature = Math.round(data.main.temp);
-		    	document.getElementById("current_weather").innerHTML += ('<tr><td>'+temperature+'</td><td class="owf owf-' + iconCode + '"></td>');
+		    	document.getElementById("current_weather").innerHTML += ('<tr><td>'+temperature+'\u00B0'+'</td><td class="owf owf-' + iconCode + '"></td>');
        			//document.getElementById("icon").innerHTML += ('<div class="owf owf-' +iconCode+'"></div>');
 			},  
 		    error: function(e){  

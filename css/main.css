@@ -1,9 +1,3 @@
-@font-face 
-{
-    font-family: "HelveticaNeue-Light";
-    src: url("../fonts/HelveticaNeue-Light.ttf"); 
-}
-
 body, html 
 {
 	background: #000;
@@ -12,7 +6,7 @@ body, html
 	width:100%;
 	height: 100%;
 
-	font-family: "HelveticaNeue-Light";
+	font-family: "HelveticaNeue-UltraLight";
 	letter-spacing: -2px;
 	color: #fff;
 	font-size: 75px;
@@ -44,10 +38,9 @@ body, html
 
 .bottom
 {
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height:60px;   /* Height of the footer */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .left
@@ -59,7 +52,30 @@ body, html
 .right
 {
 	position: relative; 
-    float: right;
+  float: right;
+}
+
+.center
+{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#weather
+{
+  padding-top: 20px;
+}
+
+#current_weather
+{
+  padding-left: 25px;
+}
+
+#forecast
+{
+ border-spacing: 30px 5px;
+ font-size: 50%;
 }
 
 .weather
@@ -67,7 +83,32 @@ body, html
     display: inline-block;
     width: 49%;
     vertical-align: top;
-    font-size: 50%;
+    font-size: 100%;
+}
+
+#today
+{
+  padding-top: 20px;
+  padding-right: 10px;
+  text-align: right
+}
+
+#news
+{
+  padding-bottom: 100px;
+}
+
+#headline
+{
+  font-family: "HelveticaNeue-Light";
+  font-size: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#abstract
+{
+  font-size: 40%;
 }
 
 .XSfont
@@ -90,10 +131,43 @@ body, html
 	font-size: 150%
 }
 
-
-
-
 img{
 	-webkit-filter: brightness(0) invert(1);
   	filter: brightness(0) invert(1);
+}
+
+@font-face 
+{
+    font-family: "HelveticaNeue-Light";
+    src: url("../fonts/HelveticaNeue-Light.ttf"); 
+}
+
+@font-face 
+{
+    font-family: "HelveticaNeue-UltraLight";
+    src: url("../fonts/HelveticaNeue-UltraLight.ttf"); 
+}
+
+@font-face 
+{
+    font-family: "HelveticaNeue-Light";
+    src: url("../fonts/HelveticaNeue-Light.ttf"); 
+}
+
+@font-face 
+{
+    font-family: "HelveticaNeue-Light";
+    src: url("../fonts/HelveticaNeue-Light.ttf"); 
+}
+
+@font-face 
+{
+    font-family: "HelveticaNeue-Light";
+    src: url("../fonts/HelveticaNeue-Light.ttf"); 
+}
+
+@font-face 
+{
+    font-family: "HelveticaNeue-Light";
+    src: url("../fonts/HelveticaNeue-Light.ttf"); 
 }

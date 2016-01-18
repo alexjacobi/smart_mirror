@@ -31,5 +31,5 @@ function getDate(){
 	var date = today.getDate();
 	var month = months[today.getMonth()];
 	var year = today.getFullYear();
-    document.getElementById("date").innerHTML = ('<div>'+month+' '+date+' '+year+'</div>');   
+    document.getElementById("date").innerHTML = ('<div>'+month+' '+date+'</div>');   
 }
